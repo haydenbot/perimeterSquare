@@ -1,0 +1,59 @@
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+//* Program name    :  Calculate rectangle area/perimeter               *
+//*                                                                     *
+//* Written by      : Hayden Botine                                     *
+//*                                                                     *
+//* Purpose         : Calculate area and perimeter of rectangle         *
+//*                                                                     *
+//* Inputs          : User enters length and width of rectangle         *
+//*                                                                     *
+//* Outputs         : Displays perimeter and area of rectangle          *
+//*                                                                     *
+//* Calls           : No internal or external calls                     *
+//*                                                                     *
+//* Structure       : BEGIN                                             *
+//*                        Straight line code no sub-processes          *
+//*                   STOP                                              *
+//*                        End of Program                               *
+//*                                                                     *
+//*---------------------------------------------------------------------*
+//* Collaboration   :                                                   *
+//*                                                                     *
+//*---------------------------------------------------------------------*
+//* Change Log:                                                         *
+//*                         Revision                                    *
+//*       Date    02/09/2023                                            *
+//* 06/06/12      jurrutia 000.000.000 Initial release of program       *
+//*                                                                     *
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	cout << "Hayden" << "\t" << "perimeterSquare.cpp\n";
+
+	//declare variables
+	double length;
+	double width;
+	double perimeter;
+	double area;
+	
+	//prompt user inputs
+	cout << "Please enter length of rectangle: ";
+	cin >> length;
+
+	cout << "Please enter width of rectangle: ";
+	cin >> width;
+
+	//calculation time
+	perimeter = 2 * (length + width);
+	area = length * width;
+
+	//display user output
+	cout << "The perimeter of the rectangle is: " << perimeter << endl;
+	cout << "The area of the rectangle is: " << area << endl;
+
+}
