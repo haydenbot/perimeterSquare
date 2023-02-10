@@ -55,5 +55,7 @@ int main()
 	//display user output
 	cout << "The perimeter of the rectangle is: " << perimeter << endl;
 	cout << "The area of the rectangle is: " << area << endl;
+	
+	return 0;
 
 }
