@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Hayden" << "\t" << "carSeller.cpp\n";
+
+	//declare variables
+	double listedPrice;
+	double offerPrice;
+
+	//prompt user input
+	cout << "Enter listed price for the car: ";
+	cin >> listedPrice;
+
+	//calculate offerPrice
+	offerPrice = (listedPrice * 0.85) + 500;
+
+	//display output to user
+	cout << "\nThe least amount the dealer will accept is $" << offerPrice;
+	
+	return 0;
+}
