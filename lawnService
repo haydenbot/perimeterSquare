@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Hayden" << "\t" << "lawnService.cpp\n";
+
+//declare variables
+	double mowPrice = 0;
+	double ferPrice = 0;
+	double planPrice = 0;
+	double totalPrice = 0;
+
+	//user input
+	cout << "Enter the area of the lawn: ";
+	cin >> mowPrice;
+	cout << "Enter the number of ferilizing applications: ";
+	cin >> ferPrice;
+	cout << "Enter the number of trees to be planted: ";
+	cin >> planPrice;
+
+	//calculate totalPrice
+	totalPrice = (mowPrice / 5000.0 * 35.0) + (ferPrice * 30.0) + (planPrice * 50.0);
+
+	//display output
+	cout << "The total price of the lawn service will be : $" << totalPrice;
+
+	return 0;
+}
