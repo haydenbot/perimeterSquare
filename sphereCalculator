@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Hayden" << "\t" << "sphereCalculator.cpp\n";
+
+	//declare variables
+	double const PI = 3.141592;
+	double radius = 0;
+	double volume = 0;
+	double surfaceArea = 0;
+
+//user input
+	cout << "Enter radius of circle: ";
+	cin >> radius;
+
+//calculate volume and surface area
+	volume = (4.0 / 3.0) * PI * pow(radius, 3);
+	surfaceArea = 4.0 * PI * pow(radius, 2);
+
+//user ouptu
+	cout << "\nThe volume of the circle is: " << volume << " cube inches" << endl;
+	cout << "The surface area of the circle: " << surfaceArea << " square inches" << endl;
+	return 0;
+}
