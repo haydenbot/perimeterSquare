@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Hayden" << "\t" << ".cpp\n";
+
+//declare variables
+	int totalItems;
+	double totalPrice;
+	double item1 = 0, item2 = 0, item3 = 0, item4 = 0, item5 =0;
+	double itemPrice = 0;
+
+	cout << "How many items will you be buying?: ";
+	cin >> totalItems;
+
+	if (totalItems < 2) {
+		cout << "Enter price: $";
+		cin >> item1;
+	}
+	else if (totalItems < 3) {
+		cout << "Enter price: $";
+		cin >> item1;
+		cout << "Enter price: $";
+		cin >> item2;
+	}
+	else if (totalItems < 4) {
+		cout << "Enter price: $";
+		cin >> item1;
+		cout << "Enter price: $";
+		cin >> item2;
+		cout << "Enter price: $";
+		cin >> item3;
+	}
+	else if (totalItems < 5) {
+		cout << "Enter price: $";
+		cin >> item1;
+		cout << "Enter price: $";
+		cin >> item2;
+		cout << "Enter price: $";
+		cin >> item3;
+		cout << "Enter price: $";
+		cin >> item4;
+	}
+	else {
+		cout << "Enter price: $";
+		cin >> item1;
+		cout << "Enter price: $";
+		cin >> item2;
+		cout << "Enter price: $";
+		cin >> item3;
+		cout << "Enter price: $";
+		cin >> item4;
+		cout << "Enter price: $";
+		cin >> item5;
+	}
+
+	itemPrice = item1 + item2 + item3 + item4 + item5;
+
+	if (itemPrice < 200) {
+		totalPrice = itemPrice + (totalItems * 10);
+	}
+	else
+		totalPrice = itemPrice;
+
+	cout << "\nThe total price of your purchase is : $" << totalPrice;
+
+
+	return 0;
+}
