@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Hayden" << "\t" << "pizzaPriceCalculator.cpp\n";
+
+	//declare variables
+	double pRadius = 5;
+	double area = 0;
+	double price = 12;
+	double totalPrice = 0;
+	const double PI = 3.1415926;
+
+	area = PI * pRadius * pRadius;
+
+	totalPrice = price / area;
+
+	cout << "The total price is: $" << totalPrice;
+
+	return 0;
+}
