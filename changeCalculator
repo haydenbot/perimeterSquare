@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+	cout << "Hayden" << "\t" << "changeCalculator.cpp\n";
+
+	//declare variables
+	int quarter;
+	int dime;
+	int nickels;
+	int pennies;
+	int calcPennies;
+
+	//prompt user to enter the amount of coins
+	cout << "Enter quarter amount: ";
+	cin >> quarter;
+	cout << "\nEnter dime amount: ";
+	cin >> dime;
+	cout << "\nEnter nickel amount; ";
+	cin >> nickels;
+	cout << "\nEnter penny amount: ";
+	cin >> pennies;
+
+	calcPennies = (quarter * 25) + (dime * 10) + (nickels * 5) + pennies;
+
+	cout << "\nTotal pennies: " << calcPennies;
+	return 0;
+}
