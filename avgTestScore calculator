@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	cout << "Hayden" << "\t" << "avgTestscore.cpp\n";
+
+	//declare variables
+	double testScore1 = 85, testScore2 = 76, testScore3 = 75, testScore4 = 98, testScore5 = 94;
+	double sum = testScore1 + testScore2 + testScore3 + testScore4 + testScore5;
+	double weightTestScore = sum / 5;
+	string letterGrade;
+	
+	//make function determine what letter grade the avg test score is
+	if (weightTestScore < 60) {
+		letterGrade = "F";
+	}
+	else if (weightTestScore < 70) {
+		letterGrade = "D";
+	}
+	else if (weightTestScore < 80) {
+		letterGrade = "C";
+	}
+	else if (weightTestScore < 90) {
+		letterGrade = "B";
+	}
+	else {
+		letterGrade = "A";
+	}
+
+		
+	
+	//display avg test score and letter grade
+	cout << "\nAverage test score: " << weightTestScore << " " << letterGrade;
+
+	return 0;
+}
