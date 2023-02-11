@@ -13,10 +13,13 @@ int main()
 	double totalPrice = 0;
 	const double PI = 3.1415926;
 
+	//calculate area of pizza
 	area = PI * pRadius * pRadius;
 
+	//calculate total price of pizza
 	totalPrice = price / area;
 
+	//display output to user
 	cout << "The total price is: $" << totalPrice;
 
 	return 0;
