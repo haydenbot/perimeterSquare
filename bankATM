@@ -1,0 +1,68 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{	
+	cout << "Hayden" << "\t" << "bankATM.cpp\n";
+
+	//declare variables
+	double accountMoney = 456;
+	double amountWithdrawn = 0;
+	char YN;
+	double totalCharge = 0;
+
+	cout << "Enter the amount you want withdrawn: $";
+	cin >> amountWithdrawn;
+
+	if (accountMoney <= 0) 
+	{
+		cout << "\nYou have insufficient funds.";
+	}
+	else 
+	{
+		if (amountWithdrawn > 500) 
+		{
+				cout << "\nYou have exceeeded the amount you may withdraw.";
+		}
+		else if (amountWithdrawn <= 0) 
+		{
+			cout << "\nMust enter a number above 0 to withdraw.";
+		}
+		else if (amountWithdrawn > accountMoney) 
+		{
+			cout << "\nYou have insufficient funds. You may pay service charge fee of $25.00 to withdraw the required amount. \nType Y for yes or N for no: ";
+			cin >> YN;
+			if (YN == 'Y')
+			{
+				if (amountWithdrawn > 300)
+				{
+					double interest = amountWithdrawn * 0.04;
+					double totalCharge = interest + 25.0;
+					cout << "The total amount you have withdrawn is $ " << amountWithdrawn << endl << "You have been charged $" << totalCharge << " of interest fees including the withdraw fee.";
+				}
+				else
+				{
+					cout << "The total amount you have withdrawn is $" << amountWithdrawn << endl << "You have been charged $25.00";
+				}
+			}
+			else
+			{
+				cout << "You have decided not to withdraw.";
+			}
+		}
+		else if (amountWithdrawn > 300)
+		{
+			double interest = amountWithdrawn * 0.04;
+			cout << "You have withdrawn $" << amountWithdrawn << endl << "You have been charged $" << interest << " of interest fees.";
+		}
+		else
+		{
+			cout << "You have withdrawn $" << amountWithdrawn;
+		}
+	}
+
+	cout << "\nThank you for using our services!";
+	
+	return 0;
+}
