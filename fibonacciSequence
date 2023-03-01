@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	//set variables
+	int previous1;
+	int previous2;
+	int current{};
+	int counter;
+	int nthFibonacci;
+
+	//ask for user input on their first two fibonacchi numbers and which number they want from that sequence
+	cout << "Enter first Fibonacci number: " << endl;
+	cin >> previous1;
+
+	cout << "Enter second Fibonacci number: " << endl;
+	cin >> previous2;
+
+	cout << "\n" << previous1 << " and " << previous2 << endl;
+
+	cout << "\nEnter desired number from the fibonacci sequence: " << endl;
+	cin >> nthFibonacci;
+
+	//calculations on spitting out desired number
+	if (nthFibonacci == 1)
+	{
+		current = previous1;
+		cout << "The fibonacchi number is: " << current;
+	}
+	else if(nthFibonacci == 2)
+	{
+		current = previous2;
+		cout << "The fibonacchi number is: " << current;
+	}
+	else
+	{
+		counter = 3;
+		while (counter <= nthFibonacci) 
+		{
+			current = previous2 + previous1;
+			previous2 = previous1;
+			previous1 = current;
+			counter++;
+		}
+	}
+
+	//user output
+	cout << "\nYour desired number is: " << current;
+
+	return 0;
+}
