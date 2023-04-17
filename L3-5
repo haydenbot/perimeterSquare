@@ -1,0 +1,65 @@
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+const int NO_OF_ITEMS = 8;
+const double TAX = .075;
+
+struct menuItemType
+{
+	string menuItem[8];
+	double menuPrice[8];
+};
+
+void getData(string menuItem, double menuPrice, int& menuList, ifstream& infile);
+void showMenu(string menuItem, double menuPrice, int& menuList);
+void printCheck(? ? ? ? );
+void makeSelection(? ? ? ? );
+
+int main()
+{
+	cout << "Hayden Botine \t" << "L3-5" << endl;
+
+	ifstream infile;
+	ofstream outfile;
+
+	infile.open("L3-5Data");
+
+	infile.close();
+
+	return 0;
+}
+
+
+void getData(string menuItem, double menuPrice, int& menuList, ifstream& infile)
+{
+	int menuList = 0;
+
+	infile >> menuItem[menuList] >> menuPrice[menuList];
+
+	while (infile && menuList < NO_OF_ITEMS)
+	{
+		menuList++;
+		infile >> menuItem[menuList] >> menuPrice[menuList];
+	}
+}
+
+void showMenu(string menuItem, double menuPrice, int& menuList)
+{
+	cout << "\tWelcome to Johnny's Restaurant!";
+}
+
+void printCheck(? ? ? ? )
+{
+	? ? ? ?
+}
+
+void makeSelection(? ? ? ? )
+{
+	? ? ? ?
+}
+
