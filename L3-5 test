@@ -8,7 +8,6 @@ using namespace std;
 
 const int NO_OF_ITEMS = 8;
 const double TAX = .075;
-int menuList = 0;
 
 struct menuItemType
 {
@@ -16,17 +15,24 @@ struct menuItemType
 	double menuPrice[8];
 };
 
-void getData(string menuItem, double menuPrice[], int& menuList, ifstream& infile);
-void showMenu(string menuItem, double menuPrice, int& menuList);
+int main();
+
+void getData(string item, double price[]);
+void showMenu(string menuItem, double menuPrice[], int& menuList, int n);
+
+ifstream infile;
+ofstream outfile;
 
 int main()
 {
 	cout << "Hayden Botine \t" << "L3-5" << endl;
 
-	ifstream infile;
-	ofstream outfile;
-
 	infile.open("L3-5Data");
+
+	getData(menuItem, menuPrice);
+
+	showMenu(menuItem, menuPrice);
+
 
 	infile.close();
 
@@ -34,21 +40,31 @@ int main()
 }
 
 
-void getData(string menuItem, double menuPrice[], int& menuList, ifstream& infile)
+void getData(string& mItem, double& mPrice)
 {
-
-	infile >> menuItem[menuList] >> menuPrice[menuList];
+	int menuList = 0;
+	infile >> mItem[menuList] >> mPrice[menuList];
 
 	while (infile && menuList < NO_OF_ITEMS)
 	{
 		menuList++;
-		infile >> menuItem[menuList] >> menuPrice[menuList];
+		infile >> mItem[menuList] >> mPrice[menuList];
 	}
 }
 
-void showMenu(string menuItem, double menuPrice, int& menuList)
+void showMenu(string& item, double& price)
 {
-	cout << "\tWelcome to Johnny's Restaurant!";
+	int menuList = 0;
+	cout << "\tWelcome to Johnny's Restaurant!" << "\n----Today's Menu----" << endl;
+
+	for (int n = 0; n < NO_OF_ITEMS; n++)
+	{
+		menuList++;
+		cout << "\t" << n << ": " << item[menuList] << " $" << price[menuList] << "\n";
+	}
 }
+
+
+
 
 
